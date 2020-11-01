@@ -1,5 +1,6 @@
 package org.itstep.task02;
-
+import org.itstep.PaymentTypes;
+import org.itstep.task01.Employee;
 
 // @formatter:off
 /**
@@ -29,19 +30,19 @@ package org.itstep.task02;
 public class Main {
     public static void main(String[] args) {
         // FIXME: Раскомментируйте код
-//        Employee[] employees = { // Обратите внимание, что мы создаем массив типа Employee, и помещаем данные
-//                                   // типа EmployeeAndTax! Подумайте, почему такое возможно?
-//                new EmployeeAndTax("Иванов", PaymentTypes.RATE, 3000),
-//                new EmployeeAndTax("Сидоров", PaymentTypes.HOURLY, 800),
-//                new EmployeeAndTax("Петров", PaymentTypes.JOB_PRICE, 5500)
-//        };
-//        System.out.println("  ФИО    |  Налог, % | Сумма (грн) | К оплате (грн)\n" +
-//                "---------|-----------|-------------|---------------");
-//        double sum = 0;
-//        for (Employee employee : employees) {
-//            System.out.println(employee);
-//            sum += employee.getPayment();
-//        }
-//        System.out.println(" Итого   |           |             | " + sum);
+        Employee[] employees = { // Обратите внимание, что мы создаем массив типа Employee, и помещаем данные
+                                  // типа EmployeeAndTax! Подумайте, почему такое возможно?
+                new EmployeeAndTax("Иванов", PaymentTypes.RATE, 3000),
+                new EmployeeAndTax("Сидоров", PaymentTypes.HOURLY, 800),
+               new EmployeeAndTax("Петров", PaymentTypes.JOB_PRICE, 5500)
+        };
+        System.out.println("  ФИО    |  Налог, % | Сумма (грн) | К оплате (грн)\n" +
+                "---------|-----------|-------------|---------------");
+        double sum = 0;
+        for (Employee employee : employees) {
+            System.out.println(employee);
+            sum += employee.getPayment();
+        }
+        System.out.println(" Итого   |           |             | " + sum);
     }
 }
